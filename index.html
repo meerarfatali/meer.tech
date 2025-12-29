@@ -178,14 +178,21 @@
 
             <!--===== CONTACT =====-->
             <section class="contact section" id="contact">
-                <h2 class="section-title">Connect with me</h2>
+                <h2 class="section-title">Connect with me 2</h2>
 
                 <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="Send" class="contact__button button">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="contact__form">
+                        <input type="hidden" name="access_key" value="cc7ae08b-7bc8-4467-a1f2-640bb2d9f43f">
+                        <!-- <input type="hidden" name="redirect" value="https://web3forms.com/success"> -->
+                         <!-- success redirect is already taken care of -->
+
+                        <!-- Subject of the Mail -->
+                        <input type="hidden" name="subject" value="New Connection Request from Portfolio">
+
+                        <input type="text" placeholder="Name" name="name" class="contact__input" required>
+                        <input type="email" placeholder="Email" name="email" class="contact__input" required>
+                        <textarea name="message" id="" cols="0" rows="10" class="contact__input"></textarea>
+                        <button type="submit" class="contact__button button">Send</button>
                     </form>
                 </div>
             </section>
